@@ -3,7 +3,9 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 HDRS = libft.h
 SRCS = ft_isalpha.c\
-	#    ft_atoi.c\
+	ft_strlcpy.c\
+	ft_strlen.c\
+	#	 ft_atoi.c\
 	#    ft_bzero.c\
 	#    ft_calloc.c\
 	#    ft_isalnum.c\
@@ -21,10 +23,9 @@ SRCS = ft_isalpha.c\
 	#    ft_strrchr.c\
 	#    ft_strdup.c\
 	#    ft_strncmp.c\
-	#    ft_strnstr.c\
-	#	 ft_strlcpy.c\
-	#    ft_strlcat.c\
-	#    ft_strlen.c\
+	#	 ft_strnstr.c\
+	#	 ft_strlcat.c\
+	
 
 OBJS = $(SRCS:.c=.o)
 
