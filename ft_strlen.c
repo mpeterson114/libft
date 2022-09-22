@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 10:44:49 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/22 11:55:49 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/09/22 11:56:03 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/09/22 12:00:21 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+size_t	ft_strlen(const char *s)
 {
-	if((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	return (0);
+	return(i);
 }
 
-/*int	main()
+/*int main()
 {
-	printf("%d", ft_isalpha('8'));
+	char s[] = "abcdefg";
+	printf("%zu", ft_strlen(s));
 	return 0;}*/
-	

@@ -22,26 +22,26 @@ SRCS = ft_isalpha.c\
 	#    ft_strdup.c\
 	#    ft_strncmp.c\
 	#    ft_strnstr.c\
-	#    ft_strlcpy.c\
+	#	 ft_strlcpy.c\
 	#    ft_strlcat.c\
 	#    ft_strlen.c\
 
-OBJS = ${SRCS: .c = .o}
+OBJS = $(SRCS:.c=.o)
 
 LIBR = ranlib
 LIBC = ar rc
 REMOVE = rm -f
 
-${NAME}: ${OBJS}
-	${LIBC} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	$(LIBC) $(NAME) $(OBJS)
 
-all: ${NAME}
+all: $(NAME)
 
 clean:
-	${REMOVE} ${OBJS} 
+	$(REMOVE) $(OBJS) 
 
 fclean: clean
-	${REMOVE} ${NAME}
+	$(REMOVE) $(NAME)
 
 re: fclean all
 
