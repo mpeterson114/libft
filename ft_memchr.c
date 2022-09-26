@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:26:50 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 12:27:28 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:12:36 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,5 @@
 
 void	*memchr(const void *s, int c, size_t n)
 {
+
 

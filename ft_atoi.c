@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:30:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 12:39:49 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:13:02 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,17 @@ int	ft_atoi(const char *str)
 	int	is_neg;
 	int	result;
 
-	if(str == NULL)
-	{
+	if (str == NULL)
 		return (0);
-	}
-	
 	i = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
-	{
 		i++;
-	}
-	is_neg = (str[i] == '-') ? -1 : 1;
+	if (str[i] == '-')
+		is_neg = -1;
+	else
+		is_neg = 1;
 	if (is_neg == -1 || str[i] == '+')
-	{
 		i++;
-	}
 	result = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
