@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 11:53:58 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 11:54:00 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/09/26 10:20:33 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/09/26 11:48:12 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z')
+	int length;
+
+	length = ft_strlen(s) - 1;
+	while (length >= 0)
 	{
-		return(c - 32);
+		if (s[length] == c)
+			return ((char *)&s[length]);
+		length--;
 	}
-	return(c);
+	return (NULL);
 }
 
-/*int main ()
+/*int main()
 {
-	printf("%c\n", ft_toupper('-'));
-	printf("%c\n", ft_toupper('b'));
-	printf("%c\n", ft_toupper('x'));
-	return 0;}*/
+	const char s[] = "chicken";
+	int c = 'c';
+	printf("%s", ft_strrchr(s, c));
+	return (0);}*/
