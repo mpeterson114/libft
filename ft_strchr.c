@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:49:00 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 11:49:02 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:19:09 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,35 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (*s == c)
-		{
-			return (char *)s;
-			s++;
-		}
-		s++;
+		if (s[i] == (char)c)
+			return (char *)(s + i);
+		i++;
 	}
 	return (NULL);
 }
 
-/*int main()
+/*char	*ft_strchr(const char *s, int c)
 {
-	const char s[] = "jack";
-	int c = 'x';
+	char	*my_s;
+	
+	my_s = (char *)s;
+	while (*my_s != '\0')
+	{
+		if (*my_s == (char)c)
+			return my_s;
+		my_s++;
+	}
+	return (NULL);
+	}
+
+int main()
+{
+	const char s[] = "cheese";
+	int c = 'e';
 	printf("%s", ft_strchr(s, c));
 	return 0;}*/	
