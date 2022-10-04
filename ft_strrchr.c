@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:20:33 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 11:48:12 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/04 17:08:55 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int length;
 
-	length = ft_strlen(s) - 1;
+	if (s == 0)
+		return (NULL);
+
+	length = ft_strlen(s);
 	while (length >= 0)
 	{
 		if (s[length] == c)
-			return ((char *)&s[length]);
+			return ((char *)(s + length));
 		length--;
 	}
 	return (NULL);

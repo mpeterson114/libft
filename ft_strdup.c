@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 11:56:03 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/04 17:12:07 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/10/04 15:39:19 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/10/04 16:13:27 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
+	size_t len;
+	char *dst;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return(i);
+	len = ft_strlen(s1) + 1;
+	dst = malloc(len);
+	if (dst == 0)
+		return(NULL);
+	ft_memcpy(dst, s1, len);
+	return (dst);
 }
 
 /*int main()
 {
-	char s[] = "abcdefg";
-	printf("%zu", ft_strlen(s));
+	const char s1[] = "abcdef";
+	printf("%s", ft_strdup(s1));
 	return 0;}*/
+
