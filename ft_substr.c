@@ -1,32 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 15:39:19 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/05 14:34:55 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/10/05 13:07:02 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/10/05 14:56:24 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t len;
-	char *dst;
+	char	*sub;
+	size_t	i;
+	size_t	j;
 
-	len = ft_strlen(s1) + 1;
-	dst = malloc(len);
-	if (dst == 0)
-		return(NULL);
-	ft_memcpy(dst, s1, len);
-	return (dst);
+	sub = (char *)malloc(len + 1);
+	if (sub == 0)
+		return (NULL);
+
+	i = start;
+	j = 0;
+	while (i < ft_strlen(s) && j < len)
+	{
+		sub[j] = s[i];
+		j++;
+		i++;
+	}
+	sub[j] = '\0';
+	return (sub);
 }
 
 /*int main()
 {
-	const char s1[] = "abcdef";
-	printf("%s", ft_strdup(s1));
-	return 0;}*/
+	char const s[] = "helloworld";
+	unsigned int start = 3;
+	size_t len = 0;
+	printf("%s", ft_substr(s, start, len));
+	return(0);
+}*/
