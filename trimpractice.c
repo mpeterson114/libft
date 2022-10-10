@@ -12,44 +12,51 @@
 
 #include "libft.h"
 
-int	ft_numstrings(const char *s, char c)
+static int	ft_numwords(const char *s, char c)
 {
-	size_t len;
-	int	count;
-	size_t	i;
-	size_t old_i;
+	size_t	count;
+	int	i;
 
-	len = ft_strlen(s);
-	i = 0;
 	count = 0;
-	while (i < len)
+	i = 0;
+	while (s[i])
 	{
-		while (i < len)
-		{
-			if (ft_strchr(s[i], c) == NULL)
-				break;
+		while (s[i] == c)
 			i++;
-		}
-		while (i < len)
-		{
-			if (ft_strchr(s[i], c) != NULL)
-				break;
+		if (i > 0 && s[i] && s[i - 1] == c)
+			count++;
+		if (s[i])
 			i++;
-		}
-		old_i = i;
-		while (i < len)
-		{
-			if (i > old_i)
-				count = count + 1;
-		}
 	}
-	return (count);
+	if (count == 0 && s[i - 1] == c)
+		return(0);
+	if (s[0] != c)
+		count++;
+	return(count);
 }
+
+/*static char	**ft_buffer(char **strings, const char *s, char c)
+{
+	int	wds;
+	char	buffer[];
+	int	str_i;
+	int	j;
+
+	wds = ft_numwords(s, c);
+	strings = malloc(sizeof(char *) * (wds + 1));
+	str_i = 0;
+	i = 0;
+
+	while (s[i])
+	{
+		while (s[i] == c)
+			
+*/	
 
 int main()
 {
-	const char s[] = "hey hi hello";
+	const char s[] = " hey hi hello";
 	char c = ' ';
-	printf("%d", ft_numstrings(s, c));
+	printf("%d", ft_numwords(s, c));
 	return 0;
 }
