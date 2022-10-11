@@ -14,8 +14,8 @@
 
 static int	ft_wdcount(const char *str, char c)
 {
-	int		index;
-	int	count;
+	unsigned int		index;
+	unsigned int	count;
 
 	index = 0;
 	count = 0;
@@ -33,9 +33,9 @@ static int	ft_wdcount(const char *str, char c)
 	return (count);
 }
 
-static char	*ft_wdcpy(const char *str, int start, int end)
+static char	*ft_wdcpy(const char *str, unsigned int start, unsigned int end)
 {
-	int i;
+	unsigned int i;
 	char	*word;
 
 	i = 0;
