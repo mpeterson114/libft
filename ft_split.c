@@ -3,90 +3,89 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 11:13:34 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/07 13:48:33 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/10/07 14:04:25 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/10/11 12:59:32 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <strings.h>
+
+static int	ft_wdcount(const char *str, char c)
+{
+	int		index;
+	int	count;
+
+	index = 0;
+	count = 0;
+	while (*str)
+	{
+		if (*str != c && index == 0)
+		{
+			index = 1;
+			count++;
+		}
+		else if (*str == c)
+			index = 0;
+		str++;
+	}
+	return (count);
+}
+
+static char	*ft_wdcpy(const char *str, int start, int end)
+{
+	int i;
+	char	*word;
+
+	i = 0;
+	word = malloc(sizeof(char) * (end - start + 1));
+	while (start < end)
+	{
+		word[i++] = str[start++];
+	}
+	word[i] = '\0';
+	return(word);
+}
 
 char	**ft_split(char const *s, char c)
 {
-	int	len;
-	int *count;
+	size_t	i;
+	size_t	j;
+	unsigned int	num_w;
 	char **strings;
-	int	i;
+	int	index;
 
-	len = ft_strlen(s);
+	num_w = ft_wdcount(s, c);
+	strings = malloc(sizeof(char *) * (num_w + 1));
+	if (!strings || !s)
+		return (0);
 	i = 0;
-	*count = 0;
-	while (i < len)
+	j = 0;
+	index = -1;
+	while (i <= ft_strlen(s))
 	{
-		while (i < len)
+		if (s[i] != c && index < 0)
+			index = i;
+		else if ((s[i] == c) || (i == ft_strlen(s) && index >= 0))
 		{
-			if (ft_strchr(s[i], c) == NULL)
-				break;
-			i++;
+			strings[j++] = ft_wdcpy(s, index, i);
+			index = -1;
 		}
-		while (i < len)
-		{
-			if (ft_strchr(s[i], c) != NULL)
-				break;
-			i++;
-		}
-		old_i = i;
-		while (i < len)
-		{
-			if (i > old_i)
-				*count = *count + 1;
-		}
+		i++;
 	}
-
-	char **strings = malloc(sizeof(char *) * *count);
-	char buffer[164839];
-	int	string_index;
-	int	j;
-
-	string_index = 0;
-	i = 0;
-	while (i < len)
-	{
-		while (i < len)
-		{
-			if (ft_strchr(s[i], c) == NULL)
-				break;
-			i++;
-		}
-		j = 0;
-		while (i < len)
-		{
-			if (ft_strchr(s[i], c) != NULL)
-				break;
-			i++;
-			buffer[j] = s[i];
-			i++;
-			j++;
-		}
-		if (j > 0)
-		{
-			buffer[j] = '\0';
-
-			int	to_allocate = sizeof(char) * (ft_strlen(buffer) + 1);
-			strings[string_index] = malloc(to_allocate);
-			strcpy(strings[string_index], buffer);
-			string_index++;
-		}
-	}
+	strings[j] = 0;
 	return(strings);
 }
 
 int main()
 {
-	const char s[] = "hey hi hello";
+	const char s[] = " hey hi hello";
 	char c = ' ';
-	printf("%s\n", ft_split(s, c));
+	char **word_split;
+	word_split = ft_split(s, c);
+	printf("%s\n", word_split[0]);
+	printf("%s\n", word_split[1]);
+	printf("%s\n", word_split[2]);
 	return 0;
 }
