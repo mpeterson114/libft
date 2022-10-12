@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:18:36 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/07 14:19:11 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:53:17 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,39 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	unsigned int len;
+	char	*new;
+	unsigned int	i;
+
+	if (!s)
+		return (NULL);
+	len = ft_strlen(s);
+	new = (char *)malloc(sizeof(char) * (len + 1));
+	if (!new)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		new[i] = f(i, s[i]);
+		i++;
+	}
+	new[len] = '\0';
+	return(new);
+}
+
+/*char  upperprac(unsigned int i, char c)
+{
+    static int indexArray[6] = {0};
+    indexArray[i] = 1;
+    if (c >= 'a' && c <= 'z')
+	{
+		return(c - 32);
+	}
+	return(c);
+}
+int main(void)
+{
+    char    s[] = "abcdef";
+    printf("%s", ft_strmapi(s, &upperprac));
+    return (0);
+}*/
