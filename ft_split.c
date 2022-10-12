@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static int	ft_wdcount(const char *str, char c)
+static size_t	ft_wdcount(const char *str, char c)
 {
-	unsigned int		index;
-	unsigned int	count;
+	size_t	index;
+	size_t	count;
 
 	index = 0;
 	count = 0;
@@ -33,9 +33,9 @@ static int	ft_wdcount(const char *str, char c)
 	return (count);
 }
 
-static char	*ft_wdcpy(const char *str, unsigned int start, unsigned int end)
+static char	*ft_wdcpy(const char *str, size_t start, size_t end)
 {
-	unsigned int i;
+	unsigned int	i;
 	char	*word;
 
 	i = 0;
@@ -52,7 +52,7 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	unsigned int	num_w;
+	size_t	num_w;
 	char **strings;
 	int	index;
 
