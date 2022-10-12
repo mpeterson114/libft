@@ -6,16 +6,16 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 12:55:42 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/12 13:15:15 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:18:03 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_wdcount(const char *str, char c)
+static unsigned int	ft_wdcount(const char *str, char c)
 {
-	size_t	index;
-	size_t	count;
+	unsigned int	index;
+	unsigned int	count;
 
 	index = 0;
 	count = 0;
@@ -39,7 +39,7 @@ static char	*ft_wdcpy(const char *str, size_t start, size_t end)
 	char	*word;
 
 	i = 0;
-	word = malloc((end - start + 1) * sizeof(char));
+	word = (char *)malloc((end - start + 1) * sizeof(char));
 	while (start < end)
 		word[i++] = str[start++];
 	word[i] = '\0';
@@ -50,12 +50,12 @@ char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	num_w;
+	unsigned int	num_w;
 	char **strings;
 	int	index;
 
 	num_w = ft_wdcount(s, c);
-	if (!s || !(strings = malloc((num_w + 1) * sizeof(char *))))
+	if (!s || !(strings = (char **)malloc((num_w + 1) * sizeof(char *))))
 		return (0);
 	i = 0;
 	j = 0;
