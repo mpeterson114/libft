@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 14:04:25 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/11 12:59:32 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/10/12 12:55:42 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/10/12 13:15:15 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,9 @@ static char	*ft_wdcpy(const char *str, size_t start, size_t end)
 	char	*word;
 
 	i = 0;
-	word = malloc(sizeof(char) * (end - start + 1));
+	word = malloc((end - start + 1) * sizeof(char));
 	while (start < end)
-	{
 		word[i++] = str[start++];
-	}
 	word[i] = '\0';
 	return(word);
 }
@@ -57,8 +55,7 @@ char	**ft_split(char const *s, char c)
 	int	index;
 
 	num_w = ft_wdcount(s, c);
-	strings = malloc(sizeof(char *) * (num_w + 1));
-	if (!strings || !s)
+	if (!s || !(strings = malloc((num_w + 1) * sizeof(char *))))
 		return (0);
 	i = 0;
 	j = 0;
@@ -67,7 +64,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] != c && index < 0)
 			index = i;
-		else if ((s[i] == c) || (i == ft_strlen(s) && index >= 0))
+		else if ((s[i] == c || i == ft_strlen(s)) && index >= 0)
 		{
 			strings[j++] = ft_wdcpy(s, index, i);
 			index = -1;
@@ -78,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	return(strings);
 }
 
-int main()
+/*int main()
 {
 	const char s[] = " hey hi hello";
 	char c = ' ';
@@ -88,4 +85,4 @@ int main()
 	printf("%s\n", word_split[1]);
 	printf("%s\n", word_split[2]);
 	return 0;
-}
+}*/
