@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:21:46 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/07 14:22:15 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/14 11:12:41 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,3 +14,12 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+    ft_putstr_fd(s, fd);
+    write(fd, "\n", 1);
+}
+
+/*int main()
+{
+    ft_putendl_fd("dogs", 2);
+    return 0;
+}*/
