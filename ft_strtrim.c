@@ -40,11 +40,10 @@ char    *ft_strtrim(char const *s1, char const *set)
     return (new_str);
 }
 
-int main()
+/*int main()
 {
     char const s1[] = "happy birthday";
     char const set[] = "happy";
     printf("%s", ft_strtrim(s1, set));
     return 0;
-
-}
+}*/

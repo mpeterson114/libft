@@ -35,11 +35,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (srclen);
 }
 
-int main()
+/*int main()
 {
 	const char src[] = "World";
 	char dst[] = "Hi";
 	size_t dstsize = 4;
 	printf("%zu", ft_strlcpy(dst, src, dstsize));
 	return 0;
-}
+}*/
