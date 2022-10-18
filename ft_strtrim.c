@@ -3,41 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlpeterson114 <mlpeterson114@student.42    +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 19:31:22 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/05 20:26:59 by mlpeterson1      ###   ########.fr       */
+/*   Updated: 2022/10/18 13:10:45 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    char    *new_str;
-    size_t  i;
-    size_t  j;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
 
-    new_str = (char *)malloc(ft_strlen(s1) - ft_strlen(set) + 1);
-    if (new_str == 0)
-        return (NULL);
-    
-    i = 0;
-    j = 0;
-    while (s1[i] != '\0')
-    {
-        if (s1[i] != set[j])
+	new_str = (char *)malloc(ft_strlen(s1) - ft_strlen(set) + 1);
+	if (new_str == 0)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i] != '\0')
 	{
-            new_str[i] = s1[i];
+		if (s1[i] != set[j])
+		{
+			new_str[i] = s1[i];
+			i++;
+		}
 		i++;
-	}
-        i++;
 	j++;
-    }
-    new_str[i] = '\0';
-    return (new_str);
+	}
+	new_str[i] = '\0';
+	return (new_str);
 }
 
 /*int main()

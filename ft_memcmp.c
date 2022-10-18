@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:27:53 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/04 10:57:05 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:42:05 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
-			return(((unsigned char *)s1)[i] - ((unsigned char*)s2)[i]);
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
 /*int main()
@@ -34,4 +34,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	printf("%d", ft_memcmp(s1, s2, n));
 	return 0;
 }*/
-

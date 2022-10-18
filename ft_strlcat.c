@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:53:30 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/05 15:39:20 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:05:49 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	d_len = ft_strlen(dst);
 	s_len = ft_strlen(src);
-
 	j = d_len;
 	i = 0;
 	if (d_len < dstsize - 1 && dstsize > 0)
@@ -45,4 +44,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	char dst[] = "WHAT'S";
 	size_t dstsize = 20;
 	printf("%zu", ft_strlcat(dst, src, dstsize));
-	return 0;}*/ 
+	return 0;}*/
