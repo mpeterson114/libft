@@ -3,17 +3,20 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
     t_list  *new;
-    int size;
+    t_list  *list_n;
 
-    if (!lst)
+    if (!f | !del)
         return (0);
-    size = ft_lstsize(lst);
-    new =(t_list *)malloc(sizeof(t_list) * (size + 1));
-    if (!new)
-        return (0);
-    while (new != NULL)
+    list_n = 0;
+    while (lst)
     {
-        new = f(lst->content);
-        new = new->next;
+        new = ft_lstnew(f(lst->content));
+        if (!new)
+        {
+            ft_lstclear(&list_n, del);
+        }
+        ft_lstadd_back(&list_n, new);
+        lst = lst->next;
     }
+    return(list_n);
 }
