@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:57:31 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/05 15:39:17 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:05:29 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new_str;
+	char	*new_str;
 	size_t	len;
 	size_t	i;
 	size_t	j;
@@ -46,4 +46,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char const s2[] = "pie";
 	printf("%s", ft_strjoin(s1, s2));
 	return (0);}*/
-

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:18:36 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/12 17:53:17 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:06:28 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int len;
-	char	*new;
+	unsigned int	len;
+	char			*new;
 	unsigned int	i;
 
 	if (!s)
@@ -31,7 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	new[len] = '\0';
-	return(new);
+	return (new);
 }
 
 /*char  upperprac(unsigned int i, char c)

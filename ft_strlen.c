@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 11:56:03 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/04 17:12:07 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:06:05 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlen(const char *s)
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 /*int main()

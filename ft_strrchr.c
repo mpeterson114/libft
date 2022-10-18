@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 10:20:33 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/04 17:08:55 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:09:00 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int length;
+	int	length;
 
 	if (s == 0)
 		return (NULL);
-
 	length = ft_strlen(s);
 	while (length >= 0)
 	{

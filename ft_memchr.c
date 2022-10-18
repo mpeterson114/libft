@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:26:50 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/28 20:18:11 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:41:21 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	const char *ptr;
+	size_t		i;
+	const char	*ptr;
 
-	ptr = (const char*)s;
+	ptr = (const char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)(s + i));
 		i++;
 	}
-	return(NULL);
+	return (NULL);
 }
 
 /*int main()

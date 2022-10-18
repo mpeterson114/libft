@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:39:19 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/12 16:36:14 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:04:27 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t len;
-	char *dst;
+	size_t	len;
+	char	*dst;
 
 	len = ft_strlen(s1) + 1;
 	dst = malloc(len);
 	if (dst == 0)
-		return(NULL);
+		return (NULL);
 	ft_memcpy(dst, s1, len);
 	return (dst);
 }

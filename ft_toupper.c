@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:53:58 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/09/26 11:54:00 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:11:56 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
-		return(c - 32);
+		return (c - 32);
 	}
-	return(c);
+	return (c);
 }
 
 /*int main ()
