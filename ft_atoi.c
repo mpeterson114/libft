@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:30:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/20 12:42:17 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/20 12:50:41 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ int	ft_atoi(const char *str)
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	sign = 1;
-	if (str[i] == '+' || str[i] == '-')
+	if (str[i] != '\0' && str[i] == '-')
 	{
-		if (str[i] == '-')
-			sign = -1;
+		sign = -1;
 		i++;
-	}
+	}	
+	else if (str[i] == '+')
+		i++;
 	result = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
