@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlpeterson114 <mlpeterson114@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:30:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/20 13:14:45 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/23 18:11:34 by mlpeterson1      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		i++;
 	}	
-	else if (str[i] != '\0' && str[i] == '+')
+	if (str[i] != '\0' && str[i] == '+')
 		i++;
 	result = 0;
 	while (str[i] >= '0' && str[i] <= '9')
@@ -42,7 +42,8 @@ int	ft_atoi(const char *str)
 
 /*int main()
 {
-	const char str[] = "  \n   +25b8";
-	printf("%d", ft_atoi(str));
+	const char str[] = " +1";
+	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi(str));
 	return (0);
-}*/
+}
