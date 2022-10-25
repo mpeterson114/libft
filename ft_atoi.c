@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlpeterson114 <mlpeterson114@student.42    +#+  +:+       +#+        */
+/*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:30:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/23 18:11:34 by mlpeterson1      ###   ########.fr       */
+/*   Updated: 2022/10/25 15:48:50 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 		{
-			sign = -sign;
+			sign *= -1;
 		}
 		i++;
 	}	
