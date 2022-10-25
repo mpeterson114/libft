@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:07:53 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 12:35:31 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/25 16:53:59 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!*lst)
+	if (!lst || !*lst || !del)
 		return ;
 	while (*lst)
 	{

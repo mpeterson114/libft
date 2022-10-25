@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 12:55:42 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 13:02:24 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:24:19 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static unsigned int	ft_wdcount(const char *str, char c)
 
 	index = 0;
 	count = 0;
+	if (!str)
+		return (0);
 	while (*str)
 	{
 		if (*str != c && index == 0)
@@ -40,6 +42,8 @@ static char	*ft_wdcpy(const char *str, size_t start, size_t end)
 
 	i = 0;
 	word = (char *)malloc((end - start + 1) * sizeof(char));
+	if (!word || !str)
+		return (0);
 	while (start < end)
 		word[i++] = str[start++];
 	word[i] = '\0';
