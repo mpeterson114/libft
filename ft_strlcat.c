@@ -15,33 +15,30 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	d_len;
-	size_t	s_len;
 	size_t	i;
-	size_t	j;
 
-	d_len = ft_strlen(dst);
-	s_len = ft_strlen(src);
-	j = d_len;
+	d_len = 0;
 	i = 0;
-	if (d_len < dstsize - 1 && dstsize > 0)
+	if (dstsize == 0 && (!dst || !src))
+		return (0);
+	while (dst[d_len] && d_len < dstsize)
+		d_len++;
+	if (dstsize < d_len)
+		return (dstsize + ft_strlen(src));
+	while (src[i] && (i + d_len + 1) < dstsize)
 	{
-		while ((src[i] != '\0') && d_len + i < dstsize - 1)
-		{
-			dst[j] = src[i];
-			j++;
-			i++;
-		}
-		dst[j] = '\0';
+		dst[d_len + i] = src[i];
+		i++;
 	}
-	if (d_len >= dstsize)
-		d_len = dstsize;
-	return (d_len + s_len);
+	if (d_len < dstsize)
+		dst[d_len + i] = '\0';
+	return (d_len + ft_strlen(src));
 }
-
+	
 /*int main()
 {
-	const char src[] = "UPPPPPPPPPPPPPPPPP";
-	char dst[] = "WHAT'S";
-	size_t dstsize = 20;
+	const char src[] = "what's";
+	char dst[] = "uppppppppp";
+	size_t dstsize = 13;
 	printf("%zu", ft_strlcat(dst, src, dstsize));
 	return 0;}*/
