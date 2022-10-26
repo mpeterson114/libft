@@ -15,31 +15,28 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	srclen;
 
-	if (dst == NULL || src == NULL)
-	{
-		return (0);
-	}
-	srclen = ft_strlen(src);
 	i = 0;
-	if (dstsize != 0)
+	if (dstsize > 0)
 	{
-		while (src[i] != '\0' && i < (dstsize -1))
+		while (*src != '\0' && i < (dstsize - 1))
 		{
-			dst[i] = src[i];
+			*dst++ = *src++;
 			i++;
 		}
-		dst[i] = '\0';
 	}
-	return (srclen);
+	if (i < dstsize)
+		*dst = '\0';
+	while (*src++)
+		i++;
+	return (i);
 }
 
 /*int main()
 {
-	const char src[] = "World";
-	char dst[] = "Hi";
-	size_t dstsize = 4;
+	const char src[] = "";
+	char dst[] = "World";
+	size_t dstsize = 5;
 	printf("%zu", ft_strlcpy(dst, src, dstsize));
 	return 0;
 }*/
