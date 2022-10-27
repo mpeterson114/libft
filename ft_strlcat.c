@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:53:30 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 13:05:49 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/27 10:33:11 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[d_len + i] = '\0';
 	return (d_len + ft_strlen(src));
 }
-	
 /*int main()
 {
 	const char src[] = "what's";

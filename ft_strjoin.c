@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:57:31 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 13:05:29 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/27 10:30:58 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	j;
 
+	if (!s1 || !s2)
+		return (0);
 	len = (ft_strlen(s1) + ft_strlen(s2) + 1);
 	new_str = (char *)malloc(len);
 	if (new_str == 0)
@@ -28,14 +30,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		new_str[i] = s1[i];
 		i++;
-	}
+	}	
 	j = 0;
 	while (s2[j] != '\0')
-	{
-		new_str[i] = s2[j];
-		i++;
-		j++;
-	}
+		new_str[i++] = s2[j++];
 	new_str[i] = '\0';
 	return (new_str);
 }
