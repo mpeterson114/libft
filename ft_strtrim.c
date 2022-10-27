@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 19:31:22 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/20 12:04:41 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/27 11:40:36 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,24 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new_str;
 	size_t	i;
 	size_t	j;
-	size_t	len;
 
-	len = (ft_strlen(s1) - ft_strlen(set));
-	new_str = (char *)malloc(len + 1);
-	if (!new_str)
-		return (NULL);
+	if (!s1 || !set)
+		return (0);
 	i = 0;
-	j = 0;
-	while (i < len)
-	{
-		if (s1[i] != set[j])
-		{
-			new_str[i] = s1[i];
-		}
+	j = ft_strlen(s1);
+	while (s1[i] && (ft_strchr(set, s1[i]) != NULL))
 		i++;
-		j++;
-	}	
-	new_str[len] = '\0';
-	return (new_str);
+	while ((ft_strchr(set, s1[j]) != NULL) && j > i)
+		j--;
+	return (ft_substr(s1, i, (j - i + 1)));
 }
 
 /*int main()
 {
-    char const s1[] = "happy birthday";
-    char const set[] = "hap";
+    char const s1[] = "can or can";
+    char const set[] = "can";
     printf("%s", ft_strtrim(s1, set));
     return 0;
 }*/
