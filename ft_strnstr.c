@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:28:57 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/19 11:33:28 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/27 10:07:44 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,25 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	h;
 	size_t	n;
 
-	h = 0;
-	if (len == 0 && !needle)
+	if (len == 0 && (!needle || !haystack))
+		return (0);
+	if (needle[0] == '\0')
 		return ((char *)haystack);
-	while (haystack[h])
+	h = 0;
+	while (haystack[h] && h < len)
 	{
-		n = 0;
-		while (haystack[h + n] == needle[n] && (h + n) < len)
+		if (haystack[h] == needle[0])
 		{
-			if (haystack[h + n] == '\0' && needle[n] == '\0')
-				return ((char *)&haystack[h]);
-			n++;
+			n = 0;
+			while (needle[n] != '\0' && h + n < len)
+			{
+				if (haystack[h + n] == needle[n] && needle[n + 1] == '\0')
+					return ((char *)&haystack[h]);
+				else if (haystack[h + n] != needle[n])
+					break ;
+				n++;
+			}
 		}
-		if (needle[n] == '\0')
-			return ((char *)haystack + h);
 		h++;
 	}
 	return (NULL);
@@ -38,8 +43,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 /*int main()
 {
-	const char haystack[] = "what's up";
-	const char needle[] = "\0";
-	size_t len = 10;
-	printf("%s", ft_strnstr(haystack, needle, len));
+	const char haystack[] = "";
+	const char needle[] = "hat";
+	size_t len = 0;
+	printf("%s\n", ft_strnstr(haystack, needle, len));
 	return 0;}*/
