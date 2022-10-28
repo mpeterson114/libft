@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:43:00 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 12:07:04 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/27 12:26:11 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 
 typedef struct s_list
 {
