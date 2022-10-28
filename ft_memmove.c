@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:52:15 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/10/18 12:47:38 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/10/28 11:31:53 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 /*int main()
 {
-        const char src[] = "hellor";
-        char dst [] = "doctor";
+        const char src[] = "hello";
+        char dst [] = "hel";
         size_t len = 7;
         ft_memmove(dst, src, len);
         printf("%s", dst);
