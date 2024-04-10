@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Checks whether the value of 'c' is alphanumeric */
+
 int	ft_isalnum(int c)
 {
 	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')

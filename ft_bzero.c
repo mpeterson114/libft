@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Fills 'n' bytes of data with '/0' within the string 's'. If n=0, 
+	bzero does nothing */  
+
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

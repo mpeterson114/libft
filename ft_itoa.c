@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Converts int value 'n' into a string of characters */
+
 static unsigned int	ft_numlen(int n)
 {
 	unsigned int	len;

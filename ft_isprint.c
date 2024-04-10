@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Checks whether or not 'c' is a printable character */
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
