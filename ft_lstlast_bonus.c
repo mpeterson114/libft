@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Locates the last node within a linked list */
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

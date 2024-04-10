@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* Searches 'n' bytes of the memory area pointed to by 's' for the first 
+	occurence of 'c'. Both 'c' and the bytes of 's' are interpreted as unsigned 
+	char. A pointer to the matching byte is returned, or NULL if the character 
+	is not found within the given memory area */
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t		i;

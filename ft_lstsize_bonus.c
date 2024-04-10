@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Measures the size of a given list by counting the number of nodes
+	that it contains */
+
 int	ft_lstsize(t_list *lst)
 {
 	int	count;

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* Creates a new list from a given list by applying the function
+	passed as parameter to the original list. If the memory allocation fails 
+	for any node in the new list, the new list will be deleted with the function 
+	passed as parameter and its memory will be freed. */
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;

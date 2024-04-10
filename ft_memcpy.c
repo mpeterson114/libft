@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Copies 'n' bytes from the byte string 'src' to the byte string 'dst'.
+	Does not control for memory overlaps (use ft_memmove in this case).
+	Returns a pointer to the modified 'dst' */ 
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	const char	*csrc;

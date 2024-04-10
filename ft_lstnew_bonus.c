@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Allocates memory for a new list node and initializes its content to the value 
+	passed as parameter. It then sets its next node to NULL. */
+
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

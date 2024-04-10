@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Adds a new node to the beginning of a linked list */
+
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)

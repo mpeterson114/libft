@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Fills the first 'len' bytes of the byte string 'b' with the value 'c'. Both 'b' and 'c' are interpreted as 
+	unsigned char. */
+
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
