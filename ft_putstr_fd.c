@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Writes the string 's' to the file descriptor passed as a parameter */
+
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
@@ -25,10 +27,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-/*int main ()
-{
-    char s[] = "cats";
-    ft_putstr_fd(s, 0);
-    return 0;
-}*/

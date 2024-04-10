@@ -43,10 +43,3 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-/*int main()
-{
-	const char str[] = "-+123";
-	printf("%d\n", ft_atoi(str));
-	printf("%d\n", atoi(str));
-	return (0);
-}*/

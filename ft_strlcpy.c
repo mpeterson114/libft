@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Copies up to 'dstsize' - 1 characters from the given
+	string 'src' to the given string 'dst', null-terminating the result. */
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -31,12 +34,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	return (i);
 }
-
-/*int main()
-{
-	const char src[] = "";
-	char dst[] = "World";
-	size_t dstsize = 5;
-	printf("%zu", ft_strlcpy(dst, src, dstsize));
-	return 0;
-}*/

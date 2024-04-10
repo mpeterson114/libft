@@ -37,12 +37,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (cdst);
 }
-
-/*int main()
-{
-        const char src[] = "hello";
-        char dst [] = "hel";
-        size_t n = 7;
-        ft_memcpy(dst, src, n);
-        printf("%s", dst);
-        return 0;}*/

@@ -22,8 +22,3 @@ int	ft_isalpha(int c)
 	}
 	return (0);
 }
-
-/*int	main()
-{
-	printf("%d", ft_isalpha('8'));
-	return 0;}*/

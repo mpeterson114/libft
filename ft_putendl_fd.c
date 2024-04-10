@@ -12,14 +12,12 @@
 
 #include "libft.h"
 
+/* Writes the given string 's' to the file descriptor passed as a parameter, 
+    followed by a new line. */
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
 
-/*int main()
-{
-    ft_putendl_fd("dogs", 2);
-    return 0;
-}*/

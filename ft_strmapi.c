@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Applies the given function 'f' to each character
+	in the given string 's' and allocates sufficient memory to store the
+	resulting new string. */
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	len;
@@ -33,20 +37,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[len] = '\0';
 	return (new);
 }
-
-/*char  upperprac(unsigned int i, char c)
-{
-    static int indexArray[6] = {0};
-    indexArray[i] = 1;
-    if (c >= 'a' && c <= 'z')
-	{
-		return(c - 32);
-	}
-	return(c);
-}
-int main(void)
-{
-    char    s[] = "abcdef";
-    printf("%s", ft_strmapi(s, &upperprac));
-    return (0);
-}*/

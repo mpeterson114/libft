@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Writes the given integer 'n' to the file descriptor passed as a parameter
+	by converting it to a char value */
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nbr;
@@ -27,9 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd ((nbr / 10), fd);
 	ft_putchar_fd((48 + nbr % 10), fd);
 }
-
-/*int main()
-{
-    ft_putnbr_fd(-22, 1);
-    return 0;
-}*/

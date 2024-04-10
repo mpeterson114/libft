@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Searches the first 'n' bytes of the given string 's1' for the first 
+	occurence of the full string 's2'. Characters that appear after \0 are
+	not searched. */
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	h;
@@ -41,10 +45,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/*int main()
-{
-	const char haystack[] = "";
-	const char needle[] = "hat";
-	size_t len = 0;
-	printf("%s\n", ft_strnstr(haystack, needle, len));
-	return 0;}*/

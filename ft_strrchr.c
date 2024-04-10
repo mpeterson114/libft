@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Finds and returns a pointer to the last occurrence of character 'c' in 
+	string 's'. Returns NULL if 'c' is not found within the string */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	length;
@@ -25,12 +28,4 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	const char s[] = "chicken";
-	int c = 'e';
-	printf("%s", ft_strrchr(s, c));
-	return (0);
-	}
-*/	
+

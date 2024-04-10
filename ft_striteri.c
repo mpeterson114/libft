@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Applies the function 'f' passed as a parameter to each character within the
+	string 's' */
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -25,24 +28,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*void	iter(unsigned int i, char *c)
-{
-	static int indexArray[11] = {0};
-
-	if (i > 10 || indexArray[i] == 1)
-		write(1, "wrong index\n", 12);
-	else
-		indexArray[i] = 1;
-	if (*c >= 'a' && *c <= 'z')
-		*c = *c - 32;
-	else if (*c >= 'A' && *c <= 'Z')
-		*c = *c + 32;
-}
-int main(void)
-{
-    char    s[] = "abcdef";
-    ft_striteri(s, &iter);
-    printf("%s", s);
-    return (0);
-}*/

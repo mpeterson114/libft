@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Extracts a substring starting at index 'start' and ending at 'len' from the given 
+	string 's'. It allocates sufficient memory for the extracted string, then returns a pointer
+	to it. */
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
@@ -36,12 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[j] = '\0';
 	return (sub);
 }
-
-/*int main()
-{
-	char const s[] = "helloworld";
-	unsigned int start = 3;
-	size_t len = 0;
-	printf("%s", ft_substr(s, start, len));
-	return(0);
-}*/

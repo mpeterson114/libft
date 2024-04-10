@@ -23,10 +23,3 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-/*int main()
-{
-	printf("%d\n", ft_isprint('A'));
-	printf("%d\n", ft_isprint('8'));
-    printf("%d\n", ft_isprint(127));
-    printf("%d\n", ft_isprint(5));
-	return 0;}*/

@@ -28,10 +28,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-/*int	main(void)
-{
-	char b[] = "abcdef";
-	ft_memset(b, 'j', 8);
-	printf("%s", b);
-	return 0;
-}*/

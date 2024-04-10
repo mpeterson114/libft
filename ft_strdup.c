@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Duplicates the given string 's1' by allocating the necessary memory and 
+	performing a copy of the given string. A pointer to the new string is
+	returned, or NULL if memory allocation fails. */
+
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
@@ -25,8 +29,3 @@ char	*ft_strdup(const char *s1)
 	return (dst);
 }
 
-/*int main()
-{
-	const char s1[] = "abcdef";
-	printf("%s", ft_strdup(s1));
-	return 0;}*/

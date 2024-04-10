@@ -23,8 +23,3 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-/*int main()
-{
-	printf("%d\n", ft_isdigit('A'));
-	printf("%d\n", ft_isdigit('8'));
-	return 0;}*/

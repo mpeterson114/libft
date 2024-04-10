@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Finds and returns a pointer to the first occurence of character 'c' 
+	in string 's'. If the character is not found, the function returns
+	NULL */
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -28,10 +32,3 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-/*int main()
-{
-	const char s[] = "cheese";
-	int c = '\0';
-	printf("%s", ft_strchr(s, c));
-	return 0;}
-	*/

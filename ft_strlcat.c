@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* Appends the given string 'src' to the end of 'dst'. It will append at most dstsize - ft_strlen(dst) - 1 and 
+	null-terminate the result. */
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	d_len;
@@ -34,10 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[d_len + i] = '\0';
 	return (d_len + ft_strlen(src));
 }
-/*int main()
-{
-	const char src[] = "what's";
-	char dst[] = "uppppppppp";
-	size_t dstsize = 13;
-	printf("%zu", ft_strlcat(dst, src, dstsize));
-	return 0;}*/

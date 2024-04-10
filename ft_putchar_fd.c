@@ -12,12 +12,9 @@
 
 #include "libft.h"
 
+/* Writes char 'c' to the file descriptor passed as a parameter */
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*int main()
-{
-	ft_putchar_fd('X', 0);
-	return 0;}*/

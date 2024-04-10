@@ -43,12 +43,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*int main()
-{
-        const char src[] = "hello";
-        char dst [] = "hel";
-        size_t len = 7;
-        ft_memmove(dst, src, len);
-        printf("%s", dst);
-        return 0;}*/

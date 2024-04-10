@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Concatenates the given strings 's1' and 's2'and allocates sufficient memory 
+	for the newly created string. Returns a pointer to the new combined string, 
+	or NULL if memory allocation fails */
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new_str;
@@ -37,10 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-/*int main()
-{
-	char const s1[] = "apple";
-	char const s2[] = "pie";
-	printf("%s", ft_strjoin(s1, s2));
-	return (0);}*/

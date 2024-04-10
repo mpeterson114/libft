@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+/* Calculates the length of string 's' */
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
@@ -24,8 +26,3 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*int main()
-{
-	char s[] = "abcdefg";
-	printf("%zu", ft_strlen(s));
-	return 0;}*/

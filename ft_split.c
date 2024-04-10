@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Allocates and copies an array of strings by splitting the given string 's' by
+	the separator 'c' passed as a parameter. The function returns an array of 
+	strings resulting from the split and NULL if memory allocation fails */
+
 static unsigned int	ft_wdcount(const char *str, char c)
 {
 	unsigned int	index;
@@ -77,15 +81,3 @@ char	**ft_split(char const *s, char c)
 	strings[j] = 0;
 	return (strings);
 }
-
-/*int main()
-{
-	const char s[] = " hey hi hello";
-	char c = ' ';
-	char **word_split;
-	word_split = ft_split(s, c);
-	printf("%s\n", word_split[0]);
-	printf("%s\n", word_split[1]);
-	printf("%s\n", word_split[2]);
-	return 0;
-}*/

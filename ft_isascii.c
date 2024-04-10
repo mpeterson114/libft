@@ -22,11 +22,3 @@ int	ft_isascii(int c)
 	}
 	return (0);
 }
-
-/*int main()
-{
-	printf("%d\n", ft_isascii('A'));
-	printf("%d\n", ft_isascii('8'));
-    printf("%d\n", ft_isascii(127));
-    printf("%d\n", ft_isascii(128));
-	return 0;}*/ 

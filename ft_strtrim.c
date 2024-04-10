@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Removes any characters of the given 'set' from the beginning and end 
+	of the given string 's1', and allocates sufficient memory to store 
+	the trimmed copy of the string. */
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -27,11 +31,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, i, (j - i + 1)));
 }
-
-/*int main()
-{
-    char const s1[] = "can or can";
-    char const set[] = "can";
-    printf("%s", ft_strtrim(s1, set));
-    return 0;
-}*/

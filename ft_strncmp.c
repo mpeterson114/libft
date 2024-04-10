@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* Compares the first 'n' bytes of the given strings 's1' and 's2'
+	Returns 0 if the two strings are identical, otherwise returns the 
+	difference between the first two differing bytes (treated as unsigned char) */
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;
@@ -27,11 +31,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
-/*int main()
-{
-	const char s1[] = "abcdef";
-	const char s2[] = "abcdefghijklm";
-	printf("%d\n", ft_strncmp(s1, s2, 6));
-	printf("%d\n", strncmp(s1, s2, 6));
-	return 0;}*/
